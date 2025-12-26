@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: Arial, Tahoma;
+  background: #0b0f14;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #0e1621;
+}
+
+nav a {
+  margin: 0 8px;
+  color: #00ff9c;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.section {
+  padding: 20px;
+  margin: 10px;
+  background: #0e1621;
+  border-radius: 16px;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: #111b27;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #022;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00ff9c;
+  color: #000;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #1f2a37;
+}
+
+.whatsapp {
+  background: #00ff9c;
+  padding: 12px 20px;
+  border-radius: 14px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}

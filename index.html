@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التاجر السوداني | بيع وشراء العملات الرقمية</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- أيقونة الموقع -->
+<link rel="icon" href="logo.png">
+</head>
+
+<body>
+
+<header>
+  <h1>التاجر السوداني</h1>
+  <p>منصة وسيط محلي لبيع وشراء العملات الرقمية داخل السودان</p>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#buy">شراء عملات</a>
+    <a href="#sell">بيع عملات</a>
+    <a href="#prices">الأسعار</a>
+    <a href="#complaints">مركز الشكاوى</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+
+<section id="home" class="section">
+  <h2>مرحبًا بك في التاجر السوداني</h2>
+  <p>
+    وسيط موثوق لشراء وبيع العملات الرقمية مثل USDT و BTC و TRX و ETH عبر طرق دفع متعددة داخل السودان.
+  </p>
+  <div class="cards">
+    <div class="card">
+      <h3>شراء عملات</h3>
+      <p>اطلب شراء عملتك الرقمية المفضلة بسهولة.</p>
+    </div>
+
+    <div class="card">
+      <h3>بيع عملات</h3>
+      <p>حوّل رصيدك الرقمي إلى كاش أو تحويل محلي.</p>
+    </div>
+
+    <div class="card">
+      <h3>مركز الشكاوى</h3>
+      <p>قدّم شكوى أو بلاغ وسيتم متابعتها مباشرة.</p>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="section">
+  <h2>طلب شراء عملات رقمية</h2>
+
+  <form id="buyForm" class="form">
+    <label>اختر العملة</label>
+    <select required>
+      <option>USDT (TRC20)</option>
+      <option>USDT (BEP20)</option>
+      <option>Bitcoin BTC</option>
+      <option>TRON TRX</option>
+      <option>Ethereum ETH</option>
+    </select>
+
+    <label>الكمية المطلوبة</label>
+    <input type="number" placeholder="ادخل الكمية" required>
+
+    <label>عنوان محفظتك</label>
+    <input type="text" placeholder="Wallet Address" required>
+
+    <label>طريقة الدفع</label>
+    <select required>
+      <option>تحويل مصرفي</option>
+      <option>Mobile Money</option>
+      <option>كاش محلي</option>
+    </select>
+
+    <button type="submit">إرسال طلب الشراء</button>
+  </form>
+</section>
+
+<section id="sell" class="section">
+  <h2>طلب بيع عملات رقمية</h2>
+
+  <form id="sellForm" class="form">
+    <label>العملة</label>
+    <select required>
+      <option>USDT</option>
+      <option>BTC</option>
+      <option>TRX</option>
+      <option>ETH</option>
+    </select>
+
+    <label>الكمية</label>
+    <input type="number" placeholder="ادخل الكمية" required>
+
+    <label>الشبكة</label>
+    <select required>
+      <option>TRC20</option>
+      <option>BEP20</option>
+      <option>ERC20</option>
+    </select>
+
+    <label>طريقة الاستلام</label>
+    <select required>
+      <option>تحويل بنكي</option>
+      <option>Mobile Money</option>
+      <option>كاش</option>
+    </select>
+
+    <button type="submit">إرسال طلب البيع</button>
+  </form>
+</section>
+
+<section id="prices" class="section">
+  <h2>أسعار العملات اليوم (تحديث يدوي)</h2>
+
+  <table>
+    <tr>
+      <th>العملة</th>
+      <th>السعر مقابل الدولار</th>
+      <th>ملاحظة</th>
+    </tr>
+    <tr>
+      <td>USDT</td>
+      <td>1.00</td>
+      <td>ثابت تقريبا</td>
+    </tr>
+    <tr>
+      <td>BTC</td>
+      <td id="btcPrice">—</td>
+      <td>يتم تحديثه يدويًا</td>
+    </tr>
+    <tr>
+      <td>ETH</td>
+      <td id="ethPrice">—</td>
+      <td>يتم تحديثه يدويًا</td>
+    </tr>
+  </table>
+
+  <button onclick="updatePrices()">تحديث الأسعار</button>
+</section>
+
+<section id="complaints" class="section">
+  <h2>📢 مركز الشكاوى والبلاغات</h2>
+  <p>إذا واجهت أي مشكلة في عملية بيع أو شراء — تواصل معنا عبر هذا النموذج.</p>
+
+  <form id="complaintForm" class="form">
+    <label>الاسم</label>
+    <input type="text" required placeholder="اسمك الكامل">
+
+    <label>رقم الهاتف</label>
+    <input type="tel" required placeholder="رقم واتساب للتواصل">
+
+    <label>نوع المشكلة</label>
+    <select required>
+      <option>تأخير تحويل</option>
+      <option>خطأ في المبلغ</option>
+      <option>مشكلة عنوان محفظة</option>
+      <option>طلب لم يكتمل</option>
+      <option>أخرى</option>
+    </select>
+
+    <label>وصف الشكوى</label>
+    <textarea rows="4" required placeholder="اكتب تفاصيل المشكلة هنا"></textarea>
+
+    <button type="submit">إرسال الشكوى</button>
+  </form>
+</section>
+
+<section id="contact" class="section">
+  <h2>تواصل معنا</h2>
+  <p>خدمة العملاء متاحة 24/7</p>
+
+  <a class="whatsapp" href="https://wa.me/249905063203" target="_blank">
+    تواصل عبر واتساب
+  </a>
+</section>
+
+<footer>
+  <p>© 2025 التاجر السوداني — جميع الحقوق محفوظة</p>
+  <p>تنبيه: التداول بالعملات الرقمية ينطوي على مخاطر — كن واعيًا دائمًا.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
